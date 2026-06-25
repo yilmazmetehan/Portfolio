@@ -1,1 +1,162 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#09090B;
+    color:#ffffff;
+}
+
+header{
+    width:100%;
+    padding:30px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+    background:rgba(9,9,11,.75);
+    backdrop-filter:blur(12px);
+}
+
+.logo{
+    font-size:34px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    color:#d4d4d8;
+    text-decoration:none;
+    transition:.3s;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#ffffff;
+}
+
+.hero{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:120px 80px;
+    gap:80px;
+}
+
+.left{
+    flex:1;
+}
+
+.hello{
+    color:#71717A;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:92px;
+    line-height:0.95;
+    margin-bottom:30px;
+}
+
+.subtitle{
+    max-width:480px;
+    color:#A1A1AA;
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:50px;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+}
+
+.buttons a{
+    padding:16px 34px;
+    border:1px solid #27272A;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    transition:.35s;
+}
+
+.buttons a:hover{
+    background:#2563EB;
+    border-color:#2563EB;
+}
+
+.right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.photo{
+    width:420px;
+    height:560px;
+    border-radius:24px;
+    background:#18181B;
+    border:1px solid #27272A;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#52525B;
+    font-size:22px;
+}
+
+@media(max-width:1000px){
+
+header{
+    padding:25px;
+}
+
+nav{
+    display:none;
+}
+
+.hero{
+    flex-direction:column;
+    padding:140px 25px 60px;
+}
+
+h1{
+    font-size:58px;
+}
+
+.subtitle{
+    font-size:18px;
+}
+
+.photo{
+    width:100%;
+    max-width:380px;
+    height:500px;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+.buttons a{
+    text-align:center;
+}
+
+}
