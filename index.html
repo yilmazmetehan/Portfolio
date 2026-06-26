@@ -440,4 +440,368 @@ Bu web sitesi; çalışmalarımı, projelerimi ve zaman içinde ürettiğim işl
 
 </section>
 
-<!-- DEVAMI SONRAKİ MESAJDA -->
+<section id="projects">
+
+<h2 class="title">
+Selected Projects
+</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<div class="number">01</div>
+
+<div class="content">
+
+<h3>Master's Thesis</h3>
+
+<p>
+
+Heat Treatment Effect on Wear Resistance of PET and Carbon Fiber Reinforced PET Produced by Fused Filament Fabrication.
+
+</p>
+
+<a href="#">View Project →</a>
+
+</div>
+
+</div>
+
+<div class="project">
+
+<div class="number">02</div>
+
+<div class="content">
+
+<h3>Production Engineering</h3>
+
+<p>
+
+Lean manufacturing, process improvement, fixture design and CNC production optimization.
+
+</p>
+
+<a href="#">View Project →</a>
+
+</div>
+
+</div>
+
+<div class="project">
+
+<div class="number">03</div>
+
+<div class="content">
+
+<h3>Personal Projects</h3>
+
+<p>
+
+Engineering ideas, software, automation and future side projects.
+
+</p>
+
+<a href="#">View Project →</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="journey">
+
+<h2 class="title">
+
+Journey
+
+</h2>
+
+<div class="timeline">
+
+<div class="item">
+
+<span>2023</span>
+
+Production Engineering Career
+
+</div>
+
+<div class="item">
+
+<span>2025</span>
+
+Master's Degree
+
+</div>
+
+<div class="item">
+
+<span>2026</span>
+
+Research & Personal Brand
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">
+
+Let's Build Something Together.
+
+</h2>
+
+<div class="contact">
+
+<a href="#">LinkedIn</a>
+
+<a href="#">GitHub</a>
+
+<a href="#">Instagram</a>
+
+<a href="mailto:mail@example.com">Email</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<div>
+
+© 2026 Metehan Yılmaz
+
+</div>
+
+</footer>
+
+<style>
+
+.projects{
+
+display:flex;
+
+flex-direction:column;
+
+gap:40px;
+
+margin-top:50px;
+
+}
+
+.project{
+
+display:grid;
+
+grid-template-columns:120px 1fr;
+
+padding:40px;
+
+border:1px solid #222226;
+
+border-radius:24px;
+
+background:#111113;
+
+transition:.35s;
+
+}
+
+.project:hover{
+
+transform:translateY(-8px);
+
+border-color:#3B82F6;
+
+}
+
+.number{
+
+font-size:46px;
+
+font-weight:800;
+
+color:#3B82F6;
+
+}
+
+.content h3{
+
+font-size:34px;
+
+margin-bottom:20px;
+
+}
+
+.content p{
+
+font-size:18px;
+
+line-height:1.8;
+
+margin-bottom:25px;
+
+}
+
+.content a{
+
+color:white;
+
+text-decoration:none;
+
+}
+
+.timeline{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.item{
+
+padding:30px;
+
+border-left:2px solid #3B82F6;
+
+background:#111113;
+
+border-radius:0 18px 18px 0;
+
+font-size:22px;
+
+}
+
+.item span{
+
+display:block;
+
+color:#3B82F6;
+
+font-size:14px;
+
+letter-spacing:2px;
+
+margin-bottom:10px;
+
+}
+
+.contact{
+
+display:flex;
+
+gap:40px;
+
+margin-top:50px;
+
+flex-wrap:wrap;
+
+}
+
+.contact a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:20px;
+
+transition:.3s;
+
+}
+
+.contact a:hover{
+
+color:#3B82F6;
+
+}
+
+footer{
+
+padding:80px;
+
+text-align:center;
+
+color:#777;
+
+}
+
+@media(max-width:900px){
+
+.project{
+
+grid-template-columns:1fr;
+
+}
+
+.number{
+
+margin-bottom:20px;
+
+}
+
+.contact{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+}
+
+</style>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.animate([
+
+{opacity:0,transform:'translateY(40px)'},
+
+{opacity:1,transform:'translateY(0px)'}
+
+],{
+
+duration:800,
+
+fill:'forwards',
+
+easing:'ease'
+
+});
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section").forEach(section=>{
+
+observer.observe(section);
+
+});
+
+</script>
+
+</body>
+
+</html>
