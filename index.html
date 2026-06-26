@@ -1,92 +1,298 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Metehan Yılmaz</title>
+    <title>Metehan Yılmaz</title>
 
-<meta name="description" content="Metehan Yılmaz | Personal Website">
+    <meta name="description"
+        content="Official personal website of Metehan Yılmaz.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="author"
+        content="Metehan Yılmaz">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="style.css">
 
 </head>
 
 <body>
 
-<header>
+    <!-- Navigation -->
 
-<div class="logo">
+    <header>
 
-M
+        <a href="#hero"
+            class="logo">
 
-</div>
+            M
 
-<nav>
+        </a>
 
-<a href="#">About</a>
+        <nav>
 
-<a href="#">Projects</a>
+            <a href="#about">About</a>
 
-<a href="#">Contact</a>
+            <a href="#projects">Projects</a>
 
-<a href="#">TR | EN</a>
+            <a href="#journey">Journey</a>
 
-</nav>
+            <a href="#contact">Contact</a>
 
-</header>
+        </nav>
 
-<section class="hero">
+        <button id="language">
 
-<div class="left">
+            TR | EN
 
-<p class="hello">
+        </button>
 
-Merhaba,
+    </header>
 
-</p>
+    <!-- Hero -->
 
-<h1>
+    <section
+        class="hero"
+        id="hero">
 
-Metehan<br>Yılmaz
+        <div class="hero-text">
 
-</h1>
+            <p class="intro">
 
-<p class="subtitle">
+                Merhaba,
 
-Kişisel web siteme hoş geldiniz.
+            </p>
 
-</p>
+            <h1>
 
-<div class="buttons">
+                Metehan<br>
+                Yılmaz
 
-<a href="#">Hakkımda</a>
+            </h1>
 
-<a href="#">Projeler</a>
+            <p class="description">
 
-</div>
+                Kişisel web siteme hoş geldiniz.
 
-</div>
+            </p>
 
-<div class="right">
+            <div class="hero-buttons">
 
-<div class="photo">
+                <a href="#about">
 
-Fotoğraf
+                    Hakkımda
 
-</div>
+                </a>
 
-</div>
+                <a href="#projects">
 
-</section>
+                    Projeler
 
-<script src="script.js"></script>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="image-placeholder">
+
+                Profil Fotoğrafı
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+
+    <section
+        id="about"
+        class="section">
+
+        <div class="container">
+
+            <h2>
+
+                About
+
+            </h2>
+
+            <p>
+
+                Bu bölümde seni tanıtacağız.
+
+                Şimdilik yalnızca yer tutucu olarak bırakıyorum.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+
+    <section
+        id="projects"
+        class="section">
+
+        <div class="container">
+
+            <h2>
+
+                Selected Projects
+
+            </h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>
+
+                        Master's Thesis
+
+                    </h3>
+
+                    <p>
+
+                        PET & PET-CF Heat Treatment
+
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>
+
+                        Production Engineering
+
+                    </h3>
+
+                    <p>
+
+                        CNC, Lean Manufacturing & Process Improvement
+
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>
+
+                        Personal Projects
+
+                    </h3>
+
+                    <p>
+
+                        Engineering & Design
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Journey -->
+
+    <section
+        id="journey"
+        class="section">
+
+        <div class="container">
+
+            <h2>
+
+                Journey
+
+            </h2>
+
+            <p>
+
+                Buraya kariyer zaman çizelgesi gelecek.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section
+        id="contact"
+        class="section">
+
+        <div class="container">
+
+            <h2>
+
+                Contact
+
+            </h2>
+
+            <div class="contact-links">
+
+                <a href="#">
+
+                    LinkedIn
+
+                </a>
+
+                <a href="#">
+
+                    GitHub
+
+                </a>
+
+                <a href="#">
+
+                    Instagram
+
+                </a>
+
+                <a href="mailto:">
+
+                    Email
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        © 2026 Metehan Yılmaz
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
