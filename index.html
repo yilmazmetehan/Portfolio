@@ -2,6 +2,7 @@
 <html lang="tr">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,34 +19,36 @@
 
 :root{
 
---bg:#0B0B0C;
+--bg:#09090B;
 --card:#141416;
+--card2:#19191D;
 --text:#F5F5F7;
---secondary:#8E8E93;
---line:#222226;
+--secondary:#9C9CA3;
 --accent:#3B82F6;
+--line:#24242A;
 --max:1280px;
 
 }
 
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
+
 }
 
 html{
+
 scroll-behavior:smooth;
+
 }
 
 body{
 
 font-family:'Manrope',sans-serif;
-
 background:var(--bg);
-
 color:var(--text);
-
 overflow-x:hidden;
 
 }
@@ -62,7 +65,7 @@ background:
 
 radial-gradient(circle at 80% 20%,
 rgba(59,130,246,.12),
-transparent 40%),
+transparent 35%),
 
 radial-gradient(circle at 20% 80%,
 rgba(59,130,246,.06),
@@ -71,6 +74,14 @@ transparent 40%);
 pointer-events:none;
 
 z-index:-1;
+
+}
+
+.container{
+
+width:min(92%,var(--max));
+
+margin:auto;
 
 }
 
@@ -84,7 +95,7 @@ left:0;
 
 width:100%;
 
-padding:28px 8%;
+padding:28px 6%;
 
 display:flex;
 
@@ -92,23 +103,23 @@ justify-content:space-between;
 
 align-items:center;
 
-backdrop-filter:blur(20px);
+backdrop-filter:blur(25px);
 
-background:rgba(11,11,12,.55);
+background:rgba(10,10,11,.55);
 
-border-bottom:1px solid rgba(255,255,255,.03);
+border-bottom:1px solid rgba(255,255,255,.04);
 
-z-index:1000;
+z-index:999;
 
 }
 
 .logo{
 
-font-size:32px;
+font-size:34px;
 
 font-weight:800;
 
-letter-spacing:4px;
+letter-spacing:5px;
 
 }
 
@@ -116,19 +127,17 @@ nav{
 
 display:flex;
 
-gap:40px;
+gap:42px;
 
 }
 
 nav a{
 
-color:#bbb;
+color:#bdbdbd;
 
 text-decoration:none;
 
-transition:.3s;
-
-font-size:15px;
+transition:.35s;
 
 }
 
@@ -142,9 +151,9 @@ color:white;
 
 font-size:14px;
 
-cursor:pointer;
+color:#bdbdbd;
 
-color:#bbb;
+cursor:pointer;
 
 }
 
@@ -152,31 +161,33 @@ color:#bbb;
 
 min-height:100vh;
 
-max-width:var(--max);
+display:grid;
+
+grid-template-columns:1.2fr .8fr;
+
+align-items:center;
+
+gap:90px;
+
+width:min(92%,1280px);
 
 margin:auto;
 
-padding:0 8%;
-
-display:flex;
-
-justify-content:center;
-
-flex-direction:column;
+padding-top:70px;
 
 }
 
 .small{
 
-color:var(--accent);
-
-letter-spacing:3px;
-
-text-transform:uppercase;
-
 font-size:13px;
 
+letter-spacing:4px;
+
+color:var(--accent);
+
 margin-bottom:25px;
+
+text-transform:uppercase;
 
 }
 
@@ -186,9 +197,9 @@ font-size:clamp(70px,9vw,150px);
 
 line-height:.9;
 
-font-weight:800;
-
 letter-spacing:-5px;
+
+font-weight:800;
 
 }
 
@@ -196,170 +207,15 @@ letter-spacing:-5px;
 
 font-size:clamp(22px,2vw,34px);
 
-margin-top:28px;
-
 font-weight:300;
-
-color:#bfbfbf;
-
-max-width:650px;
 
 line-height:1.6;
 
-}
+margin-top:30px;
 
-.scroll{
+color:#d0d0d5;
 
-margin-top:90px;
-
-display:flex;
-
-align-items:center;
-
-gap:12px;
-
-color:#777;
-
-font-size:14px;
-
-}
-
-.scroll span{
-
-width:60px;
-
-height:1px;
-
-background:#444;
-
-display:block;
-
-}
-
-section{
-
-max-width:var(--max);
-
-margin:auto;
-
-padding:160px 8%;
-
-}
-
-.title{
-
-font-size:56px;
-
-margin-bottom:50px;
-
-letter-spacing:-2px;
-
-}
-
-.about{
-
-display:grid;
-
-grid-template-columns:480px 1fr;
-
-gap:80px;
-
-align-items:center;
-
-}
-
-.photo{
-
-width:100%;
-
-aspect-ratio:4/5;
-
-border-radius:30px;
-
-background:linear-gradient(135deg,#18181b,#101012);
-
-border:1px solid #232327;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:18px;
-
-color:#666;
-
-overflow:hidden;
-
-}
-
-.about p{
-
-font-size:21px;
-
-line-height:2;
-
-color:#A1A1AA;
-
-}
-
-.highlight{
-
-color:white;
-
-}
-
-@media(max-width:980px){
-
-nav{
-
-display:none;
-
-}
-
-.hero h1{
-
-font-size:72px;
-
-letter-spacing:-2px;
-
-}
-
-.about{
-
-grid-template-columns:1fr;
-
-}
-
-.title{
-
-font-size:42px;
-
-}
-
-.about p{
-
-font-size:18px;
-
-}
-
-}
-/* ===========================
-   HERO V2
-=========================== */
-
-.hero{
-
-display:grid;
-
-grid-template-columns:1.4fr .8fr;
-
-align-items:center;
-
-gap:90px;
-
-min-height:100vh;
+max-width:650px;
 
 }
 
@@ -371,9 +227,9 @@ font-size:19px;
 
 line-height:2;
 
-max-width:620px;
-
 color:var(--secondary);
+
+max-width:620px;
 
 }
 
@@ -389,17 +245,17 @@ margin-top:45px;
 
 .primary-btn{
 
-padding:18px 34px;
-
 background:white;
 
 color:black;
 
+padding:18px 36px;
+
 border-radius:999px;
 
-text-decoration:none;
-
 font-weight:700;
+
+text-decoration:none;
 
 transition:.35s;
 
@@ -407,23 +263,21 @@ transition:.35s;
 
 .primary-btn:hover{
 
-transform:translateY(-4px);
-
-box-shadow:0 20px 40px rgba(255,255,255,.12);
+transform:translateY(-5px);
 
 }
 
 .secondary-btn{
 
-padding:18px 34px;
+border:1px solid #303036;
 
-border:1px solid #2f2f33;
+padding:18px 36px;
 
 border-radius:999px;
 
-text-decoration:none;
-
 color:white;
+
+text-decoration:none;
 
 transition:.35s;
 
@@ -433,14 +287,13 @@ transition:.35s;
 
 border-color:var(--accent);
 
-background:#151518;
+background:#17171A;
 
 }
 
 .hero-right{
 
 display:flex;
-
 justify-content:flex-end;
 
 }
@@ -449,15 +302,17 @@ justify-content:flex-end;
 
 width:360px;
 
-background:#121214;
+background:linear-gradient(145deg,#17171B,#101012);
 
-border:1px solid #242428;
+border:1px solid #26262A;
 
-border-radius:28px;
+border-radius:30px;
 
-padding:35px;
+padding:38px;
 
 backdrop-filter:blur(30px);
+
+box-shadow:0 25px 60px rgba(0,0,0,.25);
 
 }
 
@@ -477,9 +332,11 @@ margin-bottom:28px;
 
 padding:18px 0;
 
-border-bottom:1px solid #232327;
+border-bottom:1px solid #252529;
 
 font-size:17px;
+
+color:#d9d9de;
 
 }
 
@@ -489,13 +346,185 @@ border:none;
 
 }
 
+.scroll{
+
+margin-top:80px;
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+color:#7d7d82;
+
+font-size:14px;
+
+letter-spacing:1px;
+
+}
+
+.scroll span{
+
+width:70px;
+
+height:1px;
+
+background:#4a4a4f;
+
+display:block;
+
+}
+
+section{
+
+width:min(92%,1280px);
+
+margin:auto;
+
+padding:160px 0;
+
+}
+
+.title{
+
+font-size:clamp(42px,5vw,68px);
+
+letter-spacing:-2px;
+
+margin-bottom:60px;
+
+}
+
+.about{
+
+display:grid;
+
+grid-template-columns:420px 1fr;
+
+gap:90px;
+
+align-items:center;
+
+}
+
+.photo{
+
+width:100%;
+
+height:520px;
+
+border-radius:32px;
+
+background:linear-gradient(145deg,#17171B,#111113);
+
+border:1px solid #25252A;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+.photo-placeholder{
+
+font-size:120px;
+
+font-weight:800;
+
+color:#2f5fff;
+
+opacity:.25;
+
+}
+
+.about-content p{
+
+font-size:20px;
+
+line-height:2;
+
+color:#B5B5BC;
+
+margin-bottom:60px;
+
+}
+
+.highlight{
+
+color:white;
+
+font-weight:700;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:22px;
+
+}
+
+.stat{
+
+background:#131316;
+
+border:1px solid #242428;
+
+border-radius:24px;
+
+padding:32px;
+
+transition:.35s;
+
+}
+
+.stat:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--accent);
+
+}
+
+.stat h3{
+
+font-size:42px;
+
+margin-bottom:12px;
+
+}
+
+.stat span{
+
+color:var(--secondary);
+
+font-size:15px;
+
+}
+
 @media(max-width:980px){
+
+nav{
+
+display:none;
+
+}
 
 .hero{
 
 grid-template-columns:1fr;
 
-gap:60px;
+gap:70px;
+
+padding-top:140px;
 
 }
 
@@ -517,8 +546,26 @@ flex-direction:column;
 
 }
 
+.about{
+
+grid-template-columns:1fr;
+
 }
-  
+
+.photo{
+
+height:430px;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
 </style>
 
 </head>
@@ -527,46 +574,60 @@ flex-direction:column;
 
 <header>
 
-<div class="logo">M</div>
+    <div class="logo">
+        M
+    </div>
 
-<nav>
+    <nav>
 
-<a href="#about">About</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
 
-<a href="#projects">Projects</a>
+    </nav>
 
-<a href="#journey">Journey</a>
+    <div class="language">
 
-<a href="#contact">Contact</a>
+        TR | EN
 
-</nav>
-
-<div class="language">TR | EN</div>
+    </div>
 
 </header>
+
+<!-- ===========================
+HERO
+=========================== -->
 
 <section class="hero">
 
     <div class="hero-left">
 
         <div class="small">
-            WELCOME
+
+            Personal Website
+
         </div>
 
         <h1>
+
             Metehan<br>
             Yılmaz
+
         </h1>
 
         <h2>
+
             Creating ideas.<br>
             Building solutions.<br>
             Always learning.
+
         </h2>
 
         <p class="hero-description">
 
             Production Engineer, Master's Researcher and technology enthusiast.
+
             Passionate about manufacturing, engineering, design and continuous improvement.
 
         </p>
@@ -574,11 +635,15 @@ flex-direction:column;
         <div class="hero-buttons">
 
             <a href="#projects" class="primary-btn">
+
                 Explore My Work
+
             </a>
 
             <a href="#about" class="secondary-btn">
+
                 About Me
+
             </a>
 
         </div>
@@ -633,402 +698,223 @@ flex-direction:column;
 
 </section>
 
+<!-- ===========================
+ABOUT
+=========================== -->
+
 <section id="about">
 
-<h2 class="title">
+    <h2 class="title">
 
-About
+        About
 
-</h2>
+    </h2>
 
-<div class="about">
+    <div class="about">
 
-<div class="photo">
+        <div class="photo">
 
-Profil Fotoğrafı
+            <div class="photo-placeholder">
 
-</div>
+                MY
 
-<div>
+            </div>
 
-<p>
+        </div>
 
-Merhaba, ben <span class="highlight">Metehan Yılmaz</span>.
+        <div class="about-content">
 
-Makine mühendisiyim ve üretim teknolojileri, tasarım ve araştırma alanlarında çalışıyorum.
+            <p>
 
-Bu web sitesi; çalışmalarımı, projelerimi ve zaman içinde ürettiğim işleri tek bir yerde topladığım kişisel alanım olacak.
+                Merhaba, ben
+                <span class="highlight">
 
-</p>
+                    Metehan Yılmaz
 
-</div>
+                </span>.
 
-</div>
+                Üretim mühendisliği, tasarım, araştırma ve sürekli gelişim
+                benim kariyerimin temelini oluşturuyor.
+
+                Bu web sitesi yalnızca bir portföy değil;
+                aynı zamanda yaptığım projeleri,
+                yüksek lisans çalışmalarımı ve gelecekte üreteceğim işleri
+                paylaştığım kişisel dijital alanım.
+
+            </p>
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <h3>5+</h3>
+
+                    <span>Years Experience</span>
+
+                </div>
+
+                <div class="stat">
+
+                    <h3>20+</h3>
+
+                    <span>Projects</span>
+
+                </div>
+
+                <div class="stat">
+
+                    <h3>1</h3>
+
+                    <span>Master's Thesis</span>
+
+                </div>
+
+                <div class="stat">
+
+                    <h3>∞</h3>
+
+                    <span>Learning</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
+
+<!-- ===========================
+PROJECTS
+=========================== -->
 
 <section id="projects">
 
-<h2 class="title">
-Selected Projects
-</h2>
+    <h2 class="title">
+        Selected Projects
+    </h2>
 
-<div class="projects">
+    <div class="projects">
 
-<div class="project">
+        <div class="project">
 
-<div class="number">01</div>
+            <div class="project-image"></div>
 
-<div class="content">
+            <div class="project-info">
 
-<h3>Master's Thesis</h3>
+                <span class="project-tag">RESEARCH</span>
 
-<p>
+                <h3>Master's Thesis</h3>
 
-Heat Treatment Effect on Wear Resistance of PET and Carbon Fiber Reinforced PET Produced by Fused Filament Fabrication.
+                <p>
+                    Investigation of heat treatment effects on wear resistance of PET and carbon fiber reinforced PET materials produced by Fused Filament Fabrication.
+                </p>
 
-</p>
+                <a href="#">
+                    View Project →
+                </a>
 
-<a href="#">View Project →</a>
+            </div>
 
-</div>
+        </div>
 
-</div>
+        <div class="project">
 
-<div class="project">
+            <div class="project-image"></div>
 
-<div class="number">02</div>
+            <div class="project-info">
 
-<div class="content">
+                <span class="project-tag">ENGINEERING</span>
 
-<h3>Production Engineering</h3>
+                <h3>Production Engineering</h3>
 
-<p>
+                <p>
+                    CNC machining, fixture design, lean manufacturing and process optimization.
+                </p>
 
-Lean manufacturing, process improvement, fixture design and CNC production optimization.
+                <a href="#">
+                    View Project →
+                </a>
 
-</p>
+            </div>
 
-<a href="#">View Project →</a>
+        </div>
 
-</div>
+        <div class="project">
 
-</div>
+            <div class="project-image"></div>
 
-<div class="project">
+            <div class="project-info">
 
-<div class="number">03</div>
+                <span class="project-tag">PERSONAL</span>
 
-<div class="content">
+                <h3>Personal Projects</h3>
 
-<h3>Personal Projects</h3>
+                <p>
+                    Software, automation, web development and engineering side projects.
+                </p>
 
-<p>
+                <a href="#">
+                    View Project →
+                </a>
 
-Engineering ideas, software, automation and future side projects.
+            </div>
 
-</p>
+        </div>
 
-<a href="#">View Project →</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
+
+<!-- ===========================
+JOURNEY
+=========================== -->
 
 <section id="journey">
 
-<h2 class="title">
+    <h2 class="title">
+        Journey
+    </h2>
 
-Journey
+    <div class="timeline">
 
-</h2>
+        <div class="timeline-row">
+            <div class="year">2022</div>
+            <div class="line"></div>
+            <div class="text">
+                Started professional engineering career.
+            </div>
+        </div>
 
-<div class="timeline">
+        <div class="timeline-row">
+            <div class="year">2024</div>
+            <div class="line"></div>
+            <div class="text">
+                Focused on production engineering and manufacturing technologies.
+            </div>
+        </div>
 
-<div class="item">
+        <div class="timeline-row">
+            <div class="year">2025</div>
+            <div class="line"></div>
+            <div class="text">
+                Started Master's Degree.
+            </div>
+        </div>
 
-<span>2023</span>
+        <div class="timeline-row">
+            <div class="year">2026</div>
+            <div class="line"></div>
+            <div class="text">
+                Building my personal website and personal brand.
+            </div>
+        </div>
 
-Production Engineering Career
-
-</div>
-
-<div class="item">
-
-<span>2025</span>
-
-Master's Degree
-
-</div>
-
-<div class="item">
-
-<span>2026</span>
-
-Research & Personal Brand
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2 class="title">
-
-Let's Build Something Together.
-
-</h2>
-
-<div class="contact">
-
-<a href="#">LinkedIn</a>
-
-<a href="#">GitHub</a>
-
-<a href="#">Instagram</a>
-
-<a href="mailto:mail@example.com">Email</a>
-
-</div>
+    </div>
 
 </section>
 
-<footer>
-
-<div>
-
-© 2026 Metehan Yılmaz
-
-</div>
-
-</footer>
-
-<style>
-
-.projects{
-
-display:flex;
-
-flex-direction:column;
-
-gap:40px;
-
-margin-top:50px;
-
-}
-
-.project{
-
-display:grid;
-
-grid-template-columns:120px 1fr;
-
-padding:40px;
-
-border:1px solid #222226;
-
-border-radius:24px;
-
-background:#111113;
-
-transition:.35s;
-
-}
-
-.project:hover{
-
-transform:translateY(-8px);
-
-border-color:#3B82F6;
-
-}
-
-.number{
-
-font-size:46px;
-
-font-weight:800;
-
-color:#3B82F6;
-
-}
-
-.content h3{
-
-font-size:34px;
-
-margin-bottom:20px;
-
-}
-
-.content p{
-
-font-size:18px;
-
-line-height:1.8;
-
-margin-bottom:25px;
-
-}
-
-.content a{
-
-color:white;
-
-text-decoration:none;
-
-}
-
-.timeline{
-
-display:flex;
-
-flex-direction:column;
-
-gap:25px;
-
-margin-top:40px;
-
-}
-
-.item{
-
-padding:30px;
-
-border-left:2px solid #3B82F6;
-
-background:#111113;
-
-border-radius:0 18px 18px 0;
-
-font-size:22px;
-
-}
-
-.item span{
-
-display:block;
-
-color:#3B82F6;
-
-font-size:14px;
-
-letter-spacing:2px;
-
-margin-bottom:10px;
-
-}
-
-.contact{
-
-display:flex;
-
-gap:40px;
-
-margin-top:50px;
-
-flex-wrap:wrap;
-
-}
-
-.contact a{
-
-text-decoration:none;
-
-color:white;
-
-font-size:20px;
-
-transition:.3s;
-
-}
-
-.contact a:hover{
-
-color:#3B82F6;
-
-}
-
-footer{
-
-padding:80px;
-
-text-align:center;
-
-color:#777;
-
-}
-
-@media(max-width:900px){
-
-.project{
-
-grid-template-columns:1fr;
-
-}
-
-.number{
-
-margin-bottom:20px;
-
-}
-
-.contact{
-
-flex-direction:column;
-
-gap:20px;
-
-}
-
-}
-
-</style>
-
-<script>
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.animate([
-
-{opacity:0,transform:'translateY(40px)'},
-
-{opacity:1,transform:'translateY(0px)'}
-
-],{
-
-duration:800,
-
-fill:'forwards',
-
-easing:'ease'
-
-});
-
-}
-
-});
-
-});
-
-document.querySelectorAll("section").forEach(section=>{
-
-observer.observe(section);
-
-});
-
-</script>
-
-</body>
-
-</html>
+<!-- ===========================
+PART 3 BURAYA GELECEK
+=========================== -->
