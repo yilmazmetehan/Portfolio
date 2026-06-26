@@ -345,7 +345,180 @@ font-size:18px;
 }
 
 }
+/* ===========================
+   HERO V2
+=========================== */
 
+.hero{
+
+display:grid;
+
+grid-template-columns:1.4fr .8fr;
+
+align-items:center;
+
+gap:90px;
+
+min-height:100vh;
+
+}
+
+.hero-description{
+
+margin-top:35px;
+
+font-size:19px;
+
+line-height:2;
+
+max-width:620px;
+
+color:var(--secondary);
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+margin-top:45px;
+
+}
+
+.primary-btn{
+
+padding:18px 34px;
+
+background:white;
+
+color:black;
+
+border-radius:999px;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.35s;
+
+}
+
+.primary-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 20px 40px rgba(255,255,255,.12);
+
+}
+
+.secondary-btn{
+
+padding:18px 34px;
+
+border:1px solid #2f2f33;
+
+border-radius:999px;
+
+text-decoration:none;
+
+color:white;
+
+transition:.35s;
+
+}
+
+.secondary-btn:hover{
+
+border-color:var(--accent);
+
+background:#151518;
+
+}
+
+.hero-right{
+
+display:flex;
+
+justify-content:flex-end;
+
+}
+
+.hero-card{
+
+width:360px;
+
+background:#121214;
+
+border:1px solid #242428;
+
+border-radius:28px;
+
+padding:35px;
+
+backdrop-filter:blur(30px);
+
+}
+
+.hero-card-title{
+
+font-size:12px;
+
+letter-spacing:3px;
+
+color:var(--accent);
+
+margin-bottom:28px;
+
+}
+
+.hero-card-item{
+
+padding:18px 0;
+
+border-bottom:1px solid #232327;
+
+font-size:17px;
+
+}
+
+.hero-card-item:last-child{
+
+border:none;
+
+}
+
+@media(max-width:980px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+}
+
+.hero-right{
+
+justify-content:flex-start;
+
+}
+
+.hero-card{
+
+width:100%;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+}
+  
 </style>
 
 </head>
@@ -374,35 +547,89 @@ font-size:18px;
 
 <section class="hero">
 
-<div class="small">
+    <div class="hero-left">
 
-Personal Website
+        <div class="small">
+            WELCOME
+        </div>
 
-</div>
+        <h1>
+            Metehan<br>
+            Yılmaz
+        </h1>
 
-<h1>
+        <h2>
+            Creating ideas.<br>
+            Building solutions.<br>
+            Always learning.
+        </h2>
 
-Metehan<br>
+        <p class="hero-description">
 
-Yılmaz
+            Production Engineer, Master's Researcher and technology enthusiast.
+            Passionate about manufacturing, engineering, design and continuous improvement.
 
-</h1>
+        </p>
 
-<h2>
+        <div class="hero-buttons">
 
-Merhaba.
+            <a href="#projects" class="primary-btn">
+                Explore My Work
+            </a>
 
-Ben üretmeyi, öğrenmeyi ve sürekli gelişmeyi seven bir makine mühendisiyim.
+            <a href="#about" class="secondary-btn">
+                About Me
+            </a>
 
-</h2>
+        </div>
 
-<div class="scroll">
+        <div class="scroll">
 
-<span></span>
+            <span></span>
 
-Scroll to explore
+            Scroll to explore
 
-</div>
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="hero-card">
+
+            <div class="hero-card-title">
+
+                CURRENTLY
+
+            </div>
+
+            <div class="hero-card-item">
+
+                📍 Aydın / Türkiye
+
+            </div>
+
+            <div class="hero-card-item">
+
+                🏭 Production Engineer
+
+            </div>
+
+            <div class="hero-card-item">
+
+                🎓 Master's Degree
+
+            </div>
+
+            <div class="hero-card-item">
+
+                🚀 Building yilmazmetehan.com.tr
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
