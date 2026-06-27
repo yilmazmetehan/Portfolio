@@ -3,698 +3,139 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Metehan Yılmaz</title>
+    <title>Metehan Yılmaz | Makine Mühendisi</title>
+    <meta
+    name="description"
+    content="Metehan Yılmaz | Makine Mühendisi, Üretim Mühendisi ve Pamukkale Üniversitesi Makine Mühendisliği Yüksek Lisans Öğrencisi.">
 
-<meta name="description" content="Official website of Metehan Yılmaz">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"
+          crossorigin>
 
-<style>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
-:root{
+    <link rel="stylesheet"
+          href="style.css">
 
---bg:#09090B;
---card:#141416;
---card2:#19191D;
---text:#F5F5F7;
---secondary:#9C9CA3;
---accent:#3B82F6;
---line:#24242A;
---max:1280px;
-
-}
-
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
-}
-
-html{
-
-scroll-behavior:smooth;
-
-}
-
-body{
-
-font-family:'Manrope',sans-serif;
-background:var(--bg);
-color:var(--text);
-overflow-x:hidden;
-
-}
-
-body::before{
-
-content:"";
-
-position:fixed;
-
-inset:0;
-
-background:
-
-radial-gradient(circle at 80% 20%,
-rgba(59,130,246,.12),
-transparent 35%),
-
-radial-gradient(circle at 20% 80%,
-rgba(59,130,246,.06),
-transparent 40%);
-
-pointer-events:none;
-
-z-index:-1;
-
-}
-
-.container{
-
-width:min(92%,var(--max));
-
-margin:auto;
-
-}
-
-header{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-padding:28px 6%;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-backdrop-filter:blur(25px);
-
-background:rgba(10,10,11,.55);
-
-border-bottom:1px solid rgba(255,255,255,.04);
-
-z-index:999;
-
-}
-
-.logo{
-
-font-size:34px;
-
-font-weight:800;
-
-letter-spacing:5px;
-
-}
-
-nav{
-
-display:flex;
-
-gap:42px;
-
-}
-
-nav a{
-
-color:#bdbdbd;
-
-text-decoration:none;
-
-transition:.35s;
-
-}
-
-nav a:hover{
-
-color:white;
-
-}
-
-.language{
-
-font-size:14px;
-
-color:#bdbdbd;
-
-cursor:pointer;
-
-}
-
-.hero{
-
-min-height:100vh;
-
-display:grid;
-
-grid-template-columns:1.2fr .8fr;
-
-align-items:center;
-
-gap:90px;
-
-width:min(92%,1280px);
-
-margin:auto;
-
-padding-top:70px;
-
-}
-
-.small{
-
-font-size:13px;
-
-letter-spacing:4px;
-
-color:var(--accent);
-
-margin-bottom:25px;
-
-text-transform:uppercase;
-
-}
-
-.hero h1{
-
-font-size:clamp(70px,9vw,150px);
-
-line-height:.9;
-
-letter-spacing:-5px;
-
-font-weight:800;
-
-}
-
-.hero h2{
-
-font-size:clamp(22px,2vw,34px);
-
-font-weight:300;
-
-line-height:1.6;
-
-margin-top:30px;
-
-color:#d0d0d5;
-
-max-width:650px;
-
-}
-
-.hero-description{
-
-margin-top:35px;
-
-font-size:19px;
-
-line-height:2;
-
-color:var(--secondary);
-
-max-width:620px;
-
-}
-
-.hero-buttons{
-
-display:flex;
-
-gap:18px;
-
-margin-top:45px;
-
-}
-
-.primary-btn{
-
-background:white;
-
-color:black;
-
-padding:18px 36px;
-
-border-radius:999px;
-
-font-weight:700;
-
-text-decoration:none;
-
-transition:.35s;
-
-}
-
-.primary-btn:hover{
-
-transform:translateY(-5px);
-
-}
-
-.secondary-btn{
-
-border:1px solid #303036;
-
-padding:18px 36px;
-
-border-radius:999px;
-
-color:white;
-
-text-decoration:none;
-
-transition:.35s;
-
-}
-
-.secondary-btn:hover{
-
-border-color:var(--accent);
-
-background:#17171A;
-
-}
-
-.hero-right{
-
-display:flex;
-justify-content:flex-end;
-
-}
-
-.hero-card{
-
-width:360px;
-
-background:linear-gradient(145deg,#17171B,#101012);
-
-border:1px solid #26262A;
-
-border-radius:30px;
-
-padding:38px;
-
-backdrop-filter:blur(30px);
-
-box-shadow:0 25px 60px rgba(0,0,0,.25);
-
-}
-
-.hero-card-title{
-
-font-size:12px;
-
-letter-spacing:3px;
-
-color:var(--accent);
-
-margin-bottom:28px;
-
-}
-
-.hero-card-item{
-
-padding:18px 0;
-
-border-bottom:1px solid #252529;
-
-font-size:17px;
-
-color:#d9d9de;
-
-}
-
-.hero-card-item:last-child{
-
-border:none;
-
-}
-
-.scroll{
-
-margin-top:80px;
-
-display:flex;
-
-align-items:center;
-
-gap:14px;
-
-color:#7d7d82;
-
-font-size:14px;
-
-letter-spacing:1px;
-
-}
-
-.scroll span{
-
-width:70px;
-
-height:1px;
-
-background:#4a4a4f;
-
-display:block;
-
-}
-
-section{
-
-width:min(92%,1280px);
-
-margin:auto;
-
-padding:160px 0;
-
-}
-
-.title{
-
-font-size:clamp(42px,5vw,68px);
-
-letter-spacing:-2px;
-
-margin-bottom:60px;
-
-}
-
-.about{
-
-display:grid;
-
-grid-template-columns:420px 1fr;
-
-gap:90px;
-
-align-items:center;
-
-}
-
-.photo{
-
-width:100%;
-
-height:520px;
-
-border-radius:32px;
-
-background:linear-gradient(145deg,#17171B,#111113);
-
-border:1px solid #25252A;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-overflow:hidden;
-
-}
-
-.photo-placeholder{
-
-font-size:120px;
-
-font-weight:800;
-
-color:#2f5fff;
-
-opacity:.25;
-
-}
-
-.about-content p{
-
-font-size:20px;
-
-line-height:2;
-
-color:#B5B5BC;
-
-margin-bottom:60px;
-
-}
-
-.highlight{
-
-color:white;
-
-font-weight:700;
-
-}
-
-.stats{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:22px;
-
-}
-
-.stat{
-
-background:#131316;
-
-border:1px solid #242428;
-
-border-radius:24px;
-
-padding:32px;
-
-transition:.35s;
-
-}
-
-.stat:hover{
-
-transform:translateY(-8px);
-
-border-color:var(--accent);
-
-}
-
-.stat h3{
-
-font-size:42px;
-
-margin-bottom:12px;
-
-}
-
-.stat span{
-
-color:var(--secondary);
-
-font-size:15px;
-
-}
-
-@media(max-width:980px){
-
-nav{
-
-display:none;
-
-}
-
-.hero{
-
-grid-template-columns:1fr;
-
-gap:70px;
-
-padding-top:140px;
-
-}
-
-.hero-right{
-
-justify-content:flex-start;
-
-}
-
-.hero-card{
-
-width:100%;
-
-}
-
-.hero-buttons{
-
-flex-direction:column;
-
-}
-
-.about{
-
-grid-template-columns:1fr;
-
-}
-
-.photo{
-
-height:430px;
-
-}
-
-.stats{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-</style>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/font/lucide.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
-    <div class="logo">
-        M
-    </div>
+    <div class="container">
 
-    <nav>
+        <a href="#"
+           class="logo">
 
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#journey">Journey</a>
-        <a href="#contact">Contact</a>
+            Metehan Yılmaz
 
-    </nav>
+        </a>
 
-    <div class="language">
+        <nav class="navbar">
 
-        TR | EN
+            <a href="#about">Hakkımda</a>
+
+<a href="#education">Eğitim</a>
+
+<a href="#experience">Deneyim</a>
+
+<a href="#projects">Çalışmalarım</a>
+
+<a href="#contact">İletişim</a>
+
+        </nav>
+
+        <button class="language-btn">
+
+            TR | EN
+
+        </button>
 
     </div>
 
 </header>
 
-<!-- ===========================
-HERO
-=========================== -->
+<main>
 
 <section class="hero">
 
-    <div class="hero-left">
+<div class="container hero-grid">
 
-        <div class="small">
+<div class="hero-content">
 
-            Personal Website
+<span class="hero-label">
 
-        </div>
+Kişisel Websitesi
 
-        <h1>
+</span>
 
-            Metehan<br>
-            Yılmaz
+<h1>
 
-        </h1>
+Metehan<br>
+Yılmaz
 
-        <h2>
+</h1>
 
-            Creating ideas.<br>
-            Building solutions.<br>
-            Always learning.
+<h2>
 
-        </h2>
+Analiz Eden.<br>
+Üreten.<br>
+Geliştiren.
 
-        <p class="hero-description">
+</h2>
 
-            Production Engineer, Master's Researcher and technology enthusiast.
+<p>
 
-            Passionate about manufacturing, engineering, design and continuous improvement.
+<p>
 
-        </p>
+Makine mühendisiyim ve Aydın'da faaliyet gösteren
+<strong>İzelmak Makine A.Ş.</strong> bünyesinde
+<strong>Üretim Mühendisi</strong> olarak görev yapıyorum.
+Üretim teknolojileri, süreç iyileştirme ve eklemeli imalat alanlarında
+mesleki deneyimimi akademik çalışmalarla destekleyerek
+kendimi sürekli geliştirmeye devam ediyorum.
 
-        <div class="hero-buttons">
+</p>
 
-            <a href="#projects" class="primary-btn">
+</p>
 
-                Explore My Work
+<div class="hero-buttons">
 
-            </a>
+<a href="#projects"
+class="btn btn-primary">
 
-            <a href="#about" class="secondary-btn">
+Çalışmalarımı İncele
 
-                About Me
+</a>
 
-            </a>
+<a href="#about"
+class="btn btn-secondary">
 
-        </div>
+Hakkımda
 
-        <div class="scroll">
+</a>
 
-            <span></span>
+</div>
 
-            Scroll to explore
+</div>
 
-        </div>
+<div class="hero-image">
 
-    </div>
+    <img src="assets/images/profile.jpg"
+         alt="Metehan Yılmaz">
 
-    <div class="hero-right">
+</div>
 
-        <div class="hero-card">
-
-            <div class="hero-card-title">
-
-                CURRENTLY
-
-            </div>
-
-            <div class="hero-card-item">
-
-                📍 Aydın / Türkiye
-
-            </div>
-
-            <div class="hero-card-item">
-
-                🏭 Production Engineer
-
-            </div>
-
-            <div class="hero-card-item">
-
-                🎓 Master's Degree
-
-            </div>
-
-            <div class="hero-card-item">
-
-                🚀 Building yilmazmetehan.com.tr
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -702,80 +143,70 @@ HERO
 ABOUT
 =========================== -->
 
-<section id="about">
+<section id="about" class="about">
 
-    <h2 class="title">
+    <div class="container">
 
-        About
+        <span class="section-label">
+            HAKKIMDA
+        </span>
+        <div class="section-line"></div>
 
-    </h2>
+        <div class="about-grid">
 
-    <div class="about">
+            <div class="about-left">
 
-        <div class="photo">
-
-            <div class="photo-placeholder">
-
-                MY
+                <img src="assets/images/profile.jpg"
+                     alt="Metehan Yılmaz"
+                     class="about-photo">
 
             </div>
 
-        </div>
+            <div class="about-right">
 
-        <div class="about-content">
+                <h2>
 
-            <p>
+                    Makine Mühendisi
 
-                Merhaba, ben
-                <span class="highlight">
+                </h2>
 
-                    Metehan Yılmaz
+                <h3>
 
-                </span>.
+                    Üretim Mühendisi • Yüksek Lisans Öğrencisi
+                    
+                    <div class="about-tags">
 
-                Üretim mühendisliği, tasarım, araştırma ve sürekli gelişim
-                benim kariyerimin temelini oluşturuyor.
+                    <span>Makine Mühendisliği</span>
 
-                Bu web sitesi yalnızca bir portföy değil;
-                aynı zamanda yaptığım projeleri,
-                yüksek lisans çalışmalarımı ve gelecekte üreteceğim işleri
-                paylaştığım kişisel dijital alanım.
+                    <span>Üretim Teknolojileri</span>
 
-            </p>
+                    <span>Süreç İyileştirme</span>
 
-            <div class="stats">
-
-                <div class="stat">
-
-                    <h3>5+</h3>
-
-                    <span>Years Experience</span>
+                    <span>Eklemeli İmalat</span>
 
                 </div>
 
-                <div class="stat">
+                </h3>
 
-                    <h3>20+</h3>
+                <p>
 
-                    <span>Projects</span>
+Merhaba, ben <strong>Metehan Yılmaz</strong>. Makine mühendisiyim ve Aydın'da faaliyet gösteren <strong>İzelmak Makine A.Ş.</strong> bünyesinde <strong>Üretim Mühendisi</strong> olarak görev yapıyorum.
 
-                </div>
+</p>
 
-                <div class="stat">
+<p>
 
-                    <h3>1</h3>
+Günlük, haftalık ve aylık hammadde planlaması, ERP sistemi üzerinden üretim süreçlerinin yönetimi ve süreç iyileştirme çalışmaları temel sorumluluk alanlarımı oluşturmaktadır.
 
-                    <span>Master's Thesis</span>
+</p>
 
-                </div>
+<p>
 
-                <div class="stat">
+Bunun yanında Pamukkale Üniversitesi Fen Bilimleri Enstitüsü Makine Mühendisliği Anabilim Dalı'nda yüksek lisans eğitimime devam ediyor; eklemeli imalat teknolojileri üzerine akademik araştırmalar yürütüyorum.
 
-                    <h3>∞</h3>
+</p>
 
-                    <span>Learning</span>
-
-                </div>
+                
 
             </div>
 
@@ -785,136 +216,495 @@ ABOUT
 
 </section>
 
-<!-- ===========================
-PROJECTS
-=========================== -->
-
-<section id="projects">
-
-    <h2 class="title">
-        Selected Projects
-    </h2>
-
-    <div class="projects">
-
-        <div class="project">
-
-            <div class="project-image"></div>
-
-            <div class="project-info">
-
-                <span class="project-tag">RESEARCH</span>
-
-                <h3>Master's Thesis</h3>
-
-                <p>
-                    Investigation of heat treatment effects on wear resistance of PET and carbon fiber reinforced PET materials produced by Fused Filament Fabrication.
-                </p>
-
-                <a href="#">
-                    View Project →
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="project">
-
-            <div class="project-image"></div>
-
-            <div class="project-info">
-
-                <span class="project-tag">ENGINEERING</span>
-
-                <h3>Production Engineering</h3>
-
-                <p>
-                    CNC machining, fixture design, lean manufacturing and process optimization.
-                </p>
-
-                <a href="#">
-                    View Project →
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="project">
-
-            <div class="project-image"></div>
-
-            <div class="project-info">
-
-                <span class="project-tag">PERSONAL</span>
-
-                <h3>Personal Projects</h3>
-
-                <p>
-                    Software, automation, web development and engineering side projects.
-                </p>
-
-                <a href="#">
-                    View Project →
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 
 <!-- ===========================
 JOURNEY
 =========================== -->
 
-<section id="journey">
+<section id="education" class="education">
 
-    <h2 class="title">
-        Journey
-    </h2>
+    <div class="container">
 
-    <div class="timeline">
+        <span class="section-label">
 
-        <div class="timeline-row">
-            <div class="year">2022</div>
-            <div class="line"></div>
-            <div class="text">
-                Started professional engineering career.
+            EĞİTİM
+
+        </span>
+
+        <h2>
+
+            Akademik Yolculuğum
+
+        </h2>
+        <p class="section-description">
+
+Makine mühendisliği eğitimim boyunca edindiğim akademik bilgi birikimini,
+yüksek lisans çalışmalarım ile derinleştirerek üretim teknolojileri ve
+eklemeli imalat alanlarında araştırmalarıma devam ediyorum.
+
+</p>
+
+        <div class="education-grid">
+
+            <div class="education-card">
+
+                <div class="education-year">
+
+                    2019 – 2023
+
+                </div>
+
+                <h3>
+
+ Lisans
+
+</h3>
+
+                <h4>
+
+Makine ve İmalat Mühendisliği
+
+</h4>
+
+                <p>
+
+<strong>Pamukkale Üniversitesi</strong><br>
+
+Teknoloji Fakültesi
+
+</p>
+
+<p>
+
+Makine tasarımı, imalat yöntemleri, üretim teknolojileri ve malzeme bilgisi alanlarında mühendislik eğitimi aldım.
+
+</p>
+
             </div>
-        </div>
 
-        <div class="timeline-row">
-            <div class="year">2024</div>
-            <div class="line"></div>
-            <div class="text">
-                Focused on production engineering and manufacturing technologies.
-            </div>
-        </div>
+            <div class="education-card">
 
-        <div class="timeline-row">
-            <div class="year">2025</div>
-            <div class="line"></div>
-            <div class="text">
-                Started Master's Degree.
-            </div>
-        </div>
+                <div class="education-year">
 
-        <div class="timeline-row">
-            <div class="year">2026</div>
-            <div class="line"></div>
-            <div class="text">
-                Building my personal website and personal brand.
+                    2023 – Devam Ediyor
+
+                </div>
+
+                <h3>
+
+ Yüksek Lisans
+
+</h3>
+
+                <h4>
+
+Makine Mühendisliği
+
+</h4>
+
+                <p>
+
+<strong>Pamukkale Üniversitesi</strong><br>
+
+Fen Bilimleri Enstitüsü
+
+</p>
+
+                <p class="thesis">
+
+                    <strong>Tez Konusu</strong><br>
+
+                    Eriyik Yığma Modelleme (FDM) yöntemiyle üretilen PET ve karbon fiber takviyeli PET malzemelerin aşınma direncine ısıl işlemin etkisinin araştırılması.
+
+                </p>
+
+                <h5>Araştırma Alanları</h5>
+
+                <ul class="research-list">
+
+                    <li>Eklemeli İmalat</li>
+
+                    <li>Polimer Kompozit Malzemeler</li>
+
+                    <li>Isıl İşlem</li>
+
+                    <li>Triboloji</li>
+
+               </ul>
+
             </div>
+
         </div>
 
     </div>
 
 </section>
 
+<section id="experience" class="experience">
+
+    <div class="container">
+
+        <span class="section-label">
+
+            DENEYİM
+
+        </span>
+
+        <h2>
+
+            Profesyonel Deneyimim
+
+        </h2>
+        <p class="section-description">
+
+Üretim süreçlerinde edindiğim mesleki deneyimi; planlama,
+süreç yönetimi ve sürekli iyileştirme çalışmalarıyla
+geliştirirken, akademik bilgi birikimimi sahadaki uygulamalarla
+desteklemeye devam ediyorum.
+
+</p>
+
+        <div class="experience-card">
+
+    <div class="experience-left">
+        <img src="assets/logos/izelmak-logo.png"
+     alt="İzelmak Makine A.Ş."
+     class="company-logo">
+     
+
+        <h3>İzelmak Makine A.Ş.</h3>
+
+        <h4>Üretim Mühendisi</h4>
+
+        <p class="company-description">
+
+Tarım makineleri sektöründe faaliyet gösteren,
+yem karma makineleri ve katı gübre dağıtma makineleri
+üretiminde uzmanlaşmış,
+Türkiye'nin öncü üretici firmalarından biridir.
+
+</p>
+
+        <div class="experience-info">
+
+    <span class="location">📍 Aydın / Türkiye</span>
+
+    <span class="date"> 📅 2023 — Devam Ediyor</span>
+
+</div>
+
+    </div>
+
+    <div class="experience-right">
+
+        <div class="experience-block">
+
+            <h5>Profesyonel Rolüm</h5>
+
+<p>
+
+2023 yılından bu yana <strong>İzelmak Makine A.Ş.</strong> bünyesinde
+<strong>Üretim Mühendisi</strong> olarak görev yapıyorum. Üretim
+planlama, ERP tabanlı üretim süreçlerinin yönetimi ve süreç iyileştirme
+çalışmalarının yürütülmesinin yanı sıra üretim operasyonlarının etkin ve
+verimli şekilde sürdürülmesine katkı sağlıyorum.
+
+</p>
+
+<p>
+
+Görev alanım kapsamında günlük, haftalık ve aylık hammadde ihtiyaç
+planlamasını gerçekleştiriyor; üretim süreçlerini analiz ederek
+verimliliğin artırılmasına yönelik iyileştirme faaliyetlerinde aktif rol
+alıyorum. Ayrıca farklı üretim birimleri arasındaki koordinasyonun
+sağlanmasına destek veriyorum.
+
+</p>
+
+        </div>
+
+        <div class="experience-block">
+
+            <h5>Temel Sorumluluklar</h5>
+
+            <ul>
+
+                <li>Günlük, haftalık ve aylık hammadde ihtiyaç planlaması</li>
+
+                <li>ERP sistemi üzerinden üretim süreçlerinin yönetimi</li>
+
+                <li>Üretim süreçlerinin analiz edilmesi ve iyileştirilmesi</li>
+
+                <li>Üretim operasyonlarının koordinasyonu</li>
+
+            </ul>
+
+        </div>
+
+        <div class="experience-block">
+
+            <h5>Uzmanlık Alanlarım</h5>
+
+            <div class="departments">
+
+                <span>Üretim Planlama</span>
+
+                <span>ERP</span>
+
+                <span>Hammadde Planlama</span>
+
+                <span>Talaşlı İmalat</span>
+
+                <span>Kaynaklı İmalat</span>
+
+                <span>Üretim Takibi</span>
+
+                <span>Süreç İyileştirme</span>
+
+                <span>Eklemeli İmalat</span>
+
+            </div>
+
+        </div>
+
+        <div class="experience-block">
+
+            <h5>Sorumlu Olduğum Üretim Birimleri</h5>
+
+            <ul>
+
+                <li>Talaşlı İmalat</li>
+
+                <li>Yarı Mamul Kaynak Hattı</li>
+
+                <li>Hidrolik Piston</li>
+
+                <li>Kimyasal Kaplama</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
 <!-- ===========================
-PART 3 BURAYA GELECEK
+PROJECTS
 =========================== -->
+
+<section id="projects" class="projects">
+
+    <div class="container">
+
+        <span class="section-label">MÜHENDİSLİK ÇALIŞMALARI</span>
+
+<h2>Öne Çıkan Çalışmalarım</h2>
+
+<p class="section-description">
+
+Akademik araştırmalarım, üretim mühendisliği uygulamalarım ve
+imalat süreçlerinde yürüttüğüm mühendislik çalışmalarından öne çıkan örnekler.
+
+</p>
+
+        <div class="projects-grid">
+
+            <article class="project-card">
+
+                
+
+                <div class="project-content">
+
+    <span class="project-category">AKADEMİK ARAŞTIRMA</span>
+
+    <h3>
+    PET ve PET-CF Malzemelerde<br>
+    Isıl İşlemin Aşınma Direncine Etkisi
+</h3>
+
+    <p>
+        Pamukkale Üniversitesi Makine Mühendisliği Yüksek Lisans programı kapsamında yürüttüğüm bu araştırmada,
+        FDM yöntemiyle üretilen PET ve karbon fiber takviyeli PET malzemelerin farklı ısıl işlem koşulları
+        sonrasındaki aşınma davranışları deneysel olarak incelenmektedir.
+    </p>
+
+</div>
+
+            </article>
+
+            <article class="project-card">
+
+                
+
+                <div class="project-content">
+
+                    <span class="project-category">
+ÜRETİM MÜHENDİSLİĞİ
+</span>
+
+<h3>
+
+Üretim Süreçleri ve Sürekli İyileştirme
+
+</h3>
+
+<p>
+
+İzelmak Makine A.Ş.'de yürüttüğüm çalışmalar kapsamında
+ERP tabanlı üretim planlama,
+talaşlı imalat,
+kaynaklı imalat,
+hidrolik piston üretimi ve süreç iyileştirme faaliyetlerinde
+uygulamalı mühendislik deneyimi kazanıyorum.
+
+</p>
+
+
+                </div>
+
+            </article>
+
+            <article class="project-card">
+
+                <div class="project-content">
+
+                    <span class="project-category">
+
+MÜHENDİSLİK TASARIMI
+
+</span>
+
+                    <h3>
+
+Makine ve Fikstür Tasarımları
+
+</h3>
+
+                   <p>
+
+Üretime yönelik fikstür tasarımları,
+mekanik sistem çözümleri,
+hidrolik uygulamalar ve
+üretilebilirliği artırmaya yönelik mühendislik geliştirmeleri.
+
+</p>
+
+                
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================
+CONTACT
+=========================== -->
+
+<section id="contact" class="contact">
+
+    <span class="section-label">
+    İLETİŞİM
+</span>
+
+<h2>
+    İletişime Geçin
+</h2>
+
+<p class="section-description">
+
+Yeni projeler, üretim mühendisliği çalışmaları, akademik iş birlikleri
+veya mühendislik çözümleri hakkında görüşmek isterseniz,
+benimle aşağıdaki iletişim kanallarından iletişime geçebilirsiniz.
+
+</p>
+
+<div class="contact-info">
+
+    <div class="contact-item">
+        <strong>📍 Konum</strong>
+        <span>Aydın, Türkiye</span>
+    </div>
+
+    <div class="contact-item">
+        <strong>✉️ E-posta : </strong>
+        <span>metehan54yilmaz@gmail.com</span>
+    </div>
+
+</div>
+
+<div class="contact-buttons">
+
+    <a href="mailto:metehan54yilmaz@gmail.com"
+       class="btn btn-primary">
+
+        E-posta Gönder
+
+    </a>
+
+    <a href="https://www.linkedin.com/in/metehnyilmaz/"
+   target="_blank"
+   class="btn btn-secondary">
+
+    LinkedIn
+
+</a>
+
+    <a href="https://github.com/yilmazmetehan"
+   target="_blank"
+   class="btn btn-secondary">
+
+    GitHub
+
+</a>
+
+    <a href="assets/cv/Metehan_Yilmaz_CV.pdf"
+   target="_blank"
+   class="btn btn-secondary">
+
+CV İndir
+
+</a>
+
+</div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="container footer">
+
+        <div>
+
+<strong>Metehan Yılmaz</strong><br>
+
+Makine Mühendisi • Üretim Mühendisi
+
+</div>
+
+<div>
+
+© 2026 Metehan Yılmaz. Tüm hakları saklıdır.
+
+</div>
+
+    </div>
+
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
